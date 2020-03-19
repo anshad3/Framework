@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="flipcart sample tests" duration-ms="90642" started-at="2020-03-19T09:58:12Z" finished-at="2020-03-19T09:59:43Z">
+    <groups>
+    </groups>
+    <test name="To Verify login page_viaproperties_flipkart" duration-ms="90642" started-at="2020-03-19T09:58:12Z" finished-at="2020-03-19T09:59:43Z">
+      <class name="com.flip.testcases.VerifyFlipLogin">
+        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930]" name="beforeSuite" is-config="true" duration-ms="37" started-at="2020-03-19T09:58:12Z" finished-at="2020-03-19T09:58:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@521924eb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="performLoginExcel(java.util.Map)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930]" name="performLoginExcel" duration-ms="41884" started-at="2020-03-19T09:58:13Z" description="Functionality under test- register" data-provider="register1" finished-at="2020-03-19T09:58:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCaseID=TC001, Email=anshad, password=wrongpassword}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- performLoginExcel -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2020-03-19T09:58:13Z" finished-at="2020-03-19T09:58:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@521924eb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=performLoginExcel status=SUCCESS method=VerifyFlipLogin.performLoginExcel(java.util.Map)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethodProcessing(java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930]" name="afterMethodProcessing" is-config="true" duration-ms="1608" started-at="2020-03-19T09:58:57Z" finished-at="2020-03-19T09:58:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.flip.testcases.VerifyFlipLogin.performLoginExcel(java.util.Map)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@521924eb]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[TestResult name=performLoginExcel status=SUCCESS method=VerifyFlipLogin.performLoginExcel(java.util.Map)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodProcessing -->
+        <test-method status="PASS" signature="performLoginExcel(java.util.Map)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930]" name="performLoginExcel" duration-ms="36468" started-at="2020-03-19T09:58:59Z" description="Functionality under test- register" data-provider="register1" finished-at="2020-03-19T09:59:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCaseID=TC002, Email=athul, password=samepassword}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- performLoginExcel -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2020-03-19T09:58:59Z" finished-at="2020-03-19T09:58:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@521924eb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=performLoginExcel status=SUCCESS method=VerifyFlipLogin.performLoginExcel(java.util.Map)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethodProcessing(java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930]" name="afterMethodProcessing" is-config="true" duration-ms="1452" started-at="2020-03-19T09:59:41Z" finished-at="2020-03-19T09:59:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.flip.testcases.VerifyFlipLogin.performLoginExcel(java.util.Map)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@521924eb]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[TestResult name=performLoginExcel status=SUCCESS method=VerifyFlipLogin.performLoginExcel(java.util.Map)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodProcessing -->
+        <test-method status="PASS" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:com.flip.testcases.VerifyFlipLogin@d233a930]" name="afterSuite" is-config="true" duration-ms="67" started-at="2020-03-19T09:59:43Z" finished-at="2020-03-19T09:59:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@521924eb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.flip.testcases.VerifyFlipLogin -->
+    </test> <!-- To Verify login page_viaproperties_flipkart -->
+  </suite> <!-- flipcart sample tests -->
+</testng-results>

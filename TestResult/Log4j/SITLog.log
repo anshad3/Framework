@@ -1,0 +1,29 @@
+2020-03-19 15:28:13 INFO  Log4jLogger:47 - *************************************************************************************************************
+2020-03-19 15:28:13 INFO  Log4jLogger:48 - *************************************************************************************************************
+2020-03-19 15:28:13 INFO  Log4jLogger:49 - ************      Starting Method : performLoginExcel                           ***********
+2020-03-19 15:28:14 INFO  Log4jLogger:129 - ************Test Case Data is : 
+2020-03-19 15:28:14 INFO  Log4jLogger:133 - TestCaseID : TC001
+2020-03-19 15:28:14 INFO  Log4jLogger:133 - Email : anshad
+2020-03-19 15:28:14 INFO  Log4jLogger:133 - password : wrongpassword
+2020-03-19 15:28:14 INFO  Log4jLogger:135 - ************Test Case Data Details Over
+2020-03-19 15:28:15 INFO  rootLogger:29 - logger is configured
+2020-03-19 15:28:57 INFO  Log4jLogger:172 - Screenshot
+2020-03-19 15:28:57 INFO  Log4jLogger:172 - Test Case Passed
+2020-03-19 15:28:57 INFO  Log4jLogger:56 - ************      Ending Method : performLoginExcel                           ***********
+2020-03-19 15:28:57 INFO  Log4jLogger:57 - *************************************************************************************************************
+2020-03-19 15:28:57 INFO  Log4jLogger:58 - 
+2020-03-19 15:28:57 INFO  Log4jLogger:59 - 
+2020-03-19 15:28:59 INFO  Log4jLogger:47 - *************************************************************************************************************
+2020-03-19 15:28:59 INFO  Log4jLogger:48 - *************************************************************************************************************
+2020-03-19 15:28:59 INFO  Log4jLogger:49 - ************      Starting Method : performLoginExcel                           ***********
+2020-03-19 15:28:59 INFO  Log4jLogger:129 - ************Test Case Data is : 
+2020-03-19 15:28:59 INFO  Log4jLogger:133 - TestCaseID : TC002
+2020-03-19 15:28:59 INFO  Log4jLogger:133 - Email : athul
+2020-03-19 15:28:59 INFO  Log4jLogger:133 - password : samepassword
+2020-03-19 15:28:59 INFO  Log4jLogger:135 - ************Test Case Data Details Over
+2020-03-19 15:29:41 INFO  Log4jLogger:172 - Screenshot
+2020-03-19 15:29:41 INFO  Log4jLogger:172 - Test Case Passed
+2020-03-19 15:29:41 INFO  Log4jLogger:56 - ************      Ending Method : performLoginExcel                           ***********
+2020-03-19 15:29:41 INFO  Log4jLogger:57 - *************************************************************************************************************
+2020-03-19 15:29:41 INFO  Log4jLogger:58 - 
+2020-03-19 15:29:41 INFO  Log4jLogger:59 - 

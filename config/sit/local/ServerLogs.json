@@ -1,0 +1,41 @@
+[
+	{
+	  "name": "ArcotRiskfortLog",
+	  "displayname": "RA Transaction Server ArcotRiskfort.Log",
+	  "host": "10.253.20.102",
+	  "userName": "root",
+	  "password": "dost1234",
+	  "port": 22,
+	  "logFileName": "arcotriskfort.log",
+	  "path": "/opt/RA/arcot/logs",
+	  "envType": "oracle"      
+	  
+	},
+	{
+	  "name": "TMAcsLog",
+	  "displayname": "TM 1.0 ArcotACSLog.txt",
+	  "host": "10.80.55.252",
+	  "userName": "root",
+	  "password": "dost1234",
+	  "port": 22,
+	  "logFileName": "ArcotACSLog.txt",
+	  "path": "/opt/arcot/logs",
+	  "envType": ""      
+	  
+	},
+	{
+	  "name": "3DSAcsLog",
+	  "displayname": "3DS 2.0 acs-server.log",
+	  "host": "10.80.55.252",
+	  "userName": "root",
+	  "password": "dost1234",
+	  "port": 22,
+	  "logFileName": "acs-server.log",
+	  "path": "/opt/tds2-acs/tds2-home/logs",
+	  "envType": "OpenShift"      
+	  
+	}
+	
+]
+
+

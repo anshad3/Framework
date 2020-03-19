@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [flipcart sample tests]" parallel="tests">
+  <listeners>
+    <listener class-name="com.ca.base.SITListener"/>
+  </listeners>
+  <test thread-count="4" verbose="5" name="To Verify login page_viaproperties_flipkart(failed)" parallel="tests">
+    <parameter name="testexcelSheet" value="testexcel"/>
+    <parameter name="register" value="data/register.xlsx"/>
+    <classes>
+      <class name="com.flip.testcases.VerifyFlipLogin">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="afterMethodProcessing"/>
+          <include name="beforeSuite"/>
+          <include name="performLoginExcel" invocation-numbers="1"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.flip.testcases.VerifyFlipLogin -->
+    </classes>
+  </test> <!-- To Verify login page_viaproperties_flipkart(failed) -->
+</suite> <!-- Failed suite [flipcart sample tests] -->

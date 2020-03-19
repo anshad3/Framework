@@ -1,0 +1,11 @@
+[
+	{
+	  "name": "GolfstoreApp",
+	  "APP_PACKAGE": "ca.tds2.clickcart",
+	  "APP_ACTIVITY": "ca.tds2.clickcart.activity.HomeActivity"	  ,
+	  "path" : "/data/sit/local/apps/Golfstore.apk"
+	   
+	}	
+]
+
+
