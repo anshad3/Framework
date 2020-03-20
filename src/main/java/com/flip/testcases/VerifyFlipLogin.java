@@ -31,7 +31,6 @@ public class VerifyFlipLogin extends BaseSuite {
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.flipkart);
 		
 		loginAsAdmin.loginAsGA();
-	
 }
 	/*@Test(dataProvider = "register1", description = "Functionality under test- register")
 	public void performLoginExcel(Map<String, String> testData) {
