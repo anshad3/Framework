@@ -16,6 +16,7 @@
 	
 	<parameter name="testexcelSheet" value="testexcel" /> 
 		<parameter name="testexcelSheet2" value="custName" /> 
+		<parameter name="testexcelSheet3" value="verifyheader" /> 
 	<!--  <parameter name="Browser" value="Chrome" />
 		<parameter name="PerformTransactionSheet" value="BrowserSanityAMEX" /> -->
 		<classes>
@@ -24,6 +25,12 @@
 					<include name="performLogin"/>
 					  <include name="performInvalidLogin"/>
 					    <include name="verifyCustName"/>
+					    
+					     <include name="verifyLoginHeader"/>
+					     <!--  <include name="loginCustNameWithoutPWD"/>
+					       <include name="loginPWDWithoutCustName"/>
+					        <include name="LoginEmptyCredentials"/>
+					         <include name="verifyLoginTitle"/> -->
 				</methods>
 			</class>
 		</classes>

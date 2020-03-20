@@ -146,6 +146,21 @@ public class LoginActions extends BasePage{
 	}
 	
 	
+	
+	public void verifyLoginHeader(String Header) {
+		
+		LoginPage gaLogin = new LoginPage(WebDriverEnum.custApp);
+		writeLogAs.info("Logging in as customerDashboard");
+		
+			//driver.get(Utility.getValueFromProperty(System.getProperty("user.dir") + File.separator + "am.properties", "gaurl"));
+			driver.get(BaseSuite.caPropMap.get("gaurl"));
+			String headername=driver.findElement(By.xpath("//H2[@class='form-signin-heading'][text()='Please sign in']")).getText();
+			Assert.assertEquals(headername, Header);
+			ReportLogger.logInfo(Status.PASS, Header + " displayed");
+			ReportLogger.logScreenShot(Status.PASS, "Screenshot", driverEnum);
+	}
+	
+	
 	/*public void loginAsMA(String password) {
 		MasterLoginPage maLogin = new MasterLoginPage(WebDriverEnum.custApp);
 		writeLogAs.info("Logging in as MA");

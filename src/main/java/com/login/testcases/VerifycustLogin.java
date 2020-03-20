@@ -64,6 +64,25 @@ String custname=testData.get("dashboard");
 		return new CommonUtil().getInputData(testContext, "register", "testexcelSheet2");
 	}
 	
+	@Test(dataProvider = "register3", description = "Functionality under test- register")
+	public void verifyLoginHeader(Map<String, String> testData)
+	{
+		
+		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
+
+
+		String headertext=testData.get("header");
+
+				loginAsAdmin.verifyLoginHeader(headertext);
+				
+			}
+	
+	@DataProvider(name = "register3")
+	public Object[][] readUserTestCaseData3(ITestContext testContext) throws Exception {
+		return new CommonUtil().getInputData(testContext, "register", "testexcelSheet3");
+	}
+		
+	}
 	
 	
-}
+
