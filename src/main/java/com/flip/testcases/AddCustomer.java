@@ -19,7 +19,7 @@ public class AddCustomer {
 	public void performAddCustomer(Map<String, String> testData) {
 		ReportLogger.logInfo(Status.INFO, "Starting the test case"+ testData.get("TestCaseId"));
 		//Creating an object for AddCustomerActions
-		AddCustomerActions addCustomerActions=new AddCustomerActions(WebDriverEnum.AddCustomer);
+		AddCustomerActions addCustomerActions=new AddCustomerActions();
 		//calling the method to add a new customer with the given customerId and customerName in excel
 		addCustomerActions.addANewCustomerAction(testData.get("CustomerId"),testData.get("CustomerName"));
 		ReportLogger.logInfo(Status.INFO, "Ending the test case");

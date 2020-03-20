@@ -26,15 +26,6 @@ public class AddCustomerPage extends BasePage{
 	@FindBy(xpath="//h3") 
 	private WebElement SuccessMessageTxt;
 	
-	private WebDriver driver = null;
-	
-	public AddCustomerPage(WebDriverEnum driverEnum) {
-	       
-        Long threadId = new Long(Thread.currentThread().getId());
-        driver = DriverFactory.getDriver(threadId, driverEnum);
-        PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 10);
-	}
 	
 	private void setCustomerId(String customerId) {
 		customerIdTxt.clear();
