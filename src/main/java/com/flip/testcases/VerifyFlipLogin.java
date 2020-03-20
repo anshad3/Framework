@@ -44,7 +44,6 @@ String pwd = testData.get("password");
 		
 	}
 	
-	
 
 	@DataProvider(name = "register1")
 	public Object[][] readUserTestCaseData(ITestContext testContext) throws Exception {
