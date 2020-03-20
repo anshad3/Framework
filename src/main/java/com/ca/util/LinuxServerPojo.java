@@ -1,6 +1,6 @@
 package com.ca.util;
 
-import com.ca.base.pojos.ServerLogInputPojo;
+import com.base.pojos.ServerLogInputPojo;
 
 public class LinuxServerPojo {
 

@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import com.aventstack.extentreports.Status;
-import com.ca.base.BaseSuite;
-import com.ca.base.reports.ReportLogger;
+import com.base.BaseSuite;
+import com.base.reports.ReportLogger;
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.JSchException;

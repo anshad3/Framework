@@ -21,9 +21,9 @@ import java.util.Set;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.ca.base.BaseSuite;
-import com.ca.base.reports.ReportLogger;
-import com.aventstack.extentreports.Status;;
+import com.aventstack.extentreports.Status;
+import com.base.BaseSuite;
+import com.base.reports.ReportLogger;;
 
 public class reportUtilDOntUse {
 

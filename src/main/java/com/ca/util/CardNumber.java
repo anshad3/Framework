@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import com.ca._3ds.common.util.TdsQueries;
-import com.ca._3ds.utility.security.Decrypter;
-import com.ca._3ds.utility.security.EncryptDecrypt;
-import com.ca._3ds.utility.security.Encrypter;
-import com.ca.base.BaseSuite;
-import com.ca.db_connection.util.DBConnections;
+import com.base.BaseSuite;
+import com.common.util.TdsQueries;
+import com.db_connection.util.DBConnections;
+import com.utility.security.Decrypter;
+import com.utility.security.EncryptDecrypt;
+import com.utility.security.Encrypter;
 
 public class CardNumber {
 

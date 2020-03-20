@@ -24,11 +24,10 @@ import org.apache.http.ssl.SSLContexts;
 import org.codehaus.jettison.json.JSONObject;
 import org.testng.Assert;
 
+import com.api.base.JoseServiceJWS;
 import com.aventstack.extentreports.Status;
-import com.ca._3ds.common.util.TdsQueries;
-import com.ca._3ds.utility.security.CryptoService;
-import com.ca._3dsapi.base.JoseServiceJWS;
-import com.ca.base.reports.ReportLogger;
+import com.base.reports.ReportLogger;
+import com.common.util.TdsQueries;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
@@ -43,6 +42,7 @@ import com.nimbusds.jose.JWEHeader;
 import com.nimbusds.jose.JWEObject;
 import com.nimbusds.jose.Payload;
 import com.nimbusds.jose.crypto.A128GCMEncrypter;
+import com.utility.security.CryptoService;
 
 import ca.paysec.commons.cryptoclient.JweDecryptResponse;
 import ca.paysec.commons.error.ApplicationRuntimeException;

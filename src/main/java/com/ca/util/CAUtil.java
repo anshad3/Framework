@@ -15,9 +15,9 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.ca.base.reports.ReportLogger;
 import com.google.common.base.Predicate;
-import com.aventstack.extentreports.Status;;
+import com.aventstack.extentreports.Status;
+import com.base.reports.ReportLogger;;
 
 public class CAUtil {
 
