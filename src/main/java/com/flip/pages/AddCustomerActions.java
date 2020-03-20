@@ -8,7 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.Status;
 import com.base.BasePage;
+import com.base.pojos.WebDriverEnum;
 import com.base.reports.ReportLogger;
+import com.login.pages.LoginActions;
 
 public class AddCustomerActions extends BasePage{
 	private WebDriver driver;
@@ -20,9 +22,7 @@ public class AddCustomerActions extends BasePage{
 	
 	
 	public void addANewCustomerAction(String customerId, String customerName) {
-		ReportLogger.logInfo(Status.INFO, "Navigating to the 'Userlogin' page");
-		//Login
-		ReportLogger.logInfo(Status.INFO, "Clicking on 'Add Customer' link in the header");
+		
 		//Add Customer
 		ReportLogger.logInfo(Status.INFO, "Inside Add customer page");
 		//Creating an object for AddCustomerPage
