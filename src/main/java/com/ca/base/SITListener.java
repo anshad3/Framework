@@ -139,7 +139,7 @@ public class SITListener implements ITestListener, ISuiteListener {
 		
 		Long threadId = Long.valueOf(Thread.currentThread().getId());
 		WebDriverEnum driverEnum = DriverFactory.threadToCurrentDriverMap.get(threadId);
-		ReportLogger.logScreenShot(Status.PASS, "Screenshot", driverEnum);
+		ReportLogger.logScreenShot(Status.PASS, "PassScreenshot", driverEnum);
 	//	ReportLogger.logInfo(Status.FAIL,exceptionAsString);
 		
 		if(ServerLogListener.loggerInitialised){

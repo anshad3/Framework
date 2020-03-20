@@ -1,4 +1,4 @@
-package com.flip.pages;
+package com.login.pages;
 
 //package com.ca.am.actions;
 
@@ -37,7 +37,7 @@ public class LoginActions extends BasePage{
 	}
 
 	public void loginToSampleApp() {
-		//LoginPage gaLogin = new LoginPage(WebDriverEnum.flipkart);
+		//LoginPage gaLogin = new LoginPage(WebDriverEnum.custApp);
 		//writeLogAs.info("Logging in as GA");
 		
 			//driver.get(Utility.getValueFromProperty(System.getProperty("user.dir") + File.separator + "am.properties", "gaurl"));
@@ -47,8 +47,8 @@ public class LoginActions extends BasePage{
 		
 	}
 	public void loginAsGA() {
-		LoginPage gaLogin = new LoginPage(WebDriverEnum.flipkart);
-		writeLogAs.info("Logging in as GA");
+		LoginPage gaLogin = new LoginPage(WebDriverEnum.custApp);
+		writeLogAs.info("Logging in as customerDashboard");
 		try {
 			//driver.get(Utility.getValueFromProperty(System.getProperty("user.dir") + File.separator + "am.properties", "gaurl"));
 			driver.get(BaseSuite.caPropMap.get("gaurl"));
@@ -61,17 +61,17 @@ public class LoginActions extends BasePage{
 		//	Thread.sleep(5000);
 			//gaLogin.clickOrgName();
 			
-			ReportLogger.logScreenShot(Status.PASS, "Screenshot", driverEnum);
+			ReportLogger.logScreenShot(Status.PASS, "LoginPageScreenshot", driverEnum);
 			//writeLogAs.info("Navigating to the 'Userlogin' page");
-			ReportLogger.logInfo(Status.PASS, "Navigating to the 'Userlogin' page");
+			ReportLogger.logInfo(Status.PASS, "Navigating to the 'Dashboard' page");
 			gaLogin.setUserName(username);
 			gaLogin.setPassword(password);
-			ReportLogger.logScreenShot(Status.PASS, "Screenshot", driverEnum);
+			//ReportLogger.logScreenShot(Status.PASS, "Screenshot", driverEnum);
 			gaLogin.clickLoginBtn();
 			
 			Thread.sleep(2000);
 			writeLogAs.info("Clicked Login Button");
-			ReportLogger.logScreenShot(Status.PASS, "Screenshot", driverEnum);
+			ReportLogger.logScreenShot(Status.PASS, "DashboardScreenshot", driverEnum);
 		  // System.out.println("clicked Login Button");
 		
 		} catch (InterruptedException e) {
@@ -80,14 +80,14 @@ public class LoginActions extends BasePage{
 	}
 	
 	public void logoutAsAdmin() {
-		LoginPage gaLogin = new LoginPage(WebDriverEnum.flipkart);
+		LoginPage gaLogin = new LoginPage(WebDriverEnum.custApp);
 		gaLogin.clickLogoutLink();
 	}
 	
 	
 /*	public void LoginExcel( String Email, String pwd) {
 		System.out.println("inside loginExcelmethod");
-		LoginPage gaLogin = new LoginPage(WebDriverEnum.flipkart);
+		LoginPage gaLogin = new LoginPage(WebDriverEnum.custApp);
 		driver.get(BaseSuite.caPropMap.get("gaurl"));
 		gaLogin.clickOrgName();
 		gaLogin.setUserName(Email);
@@ -98,7 +98,7 @@ public class LoginActions extends BasePage{
 	}
 	*/
 	/*public void loginAsMA(String password) {
-		MasterLoginPage maLogin = new MasterLoginPage(WebDriverEnum.flipkart);
+		MasterLoginPage maLogin = new MasterLoginPage(WebDriverEnum.custApp);
 		writeLogAs.info("Logging in as MA");
 		
 		try {

@@ -10,6 +10,7 @@ public enum WebDriverEnum {
 	RAMasterAdmin("RAMasterAdmin"),
 	GolfStoreApp("GolfStoreApp"),
 	flipkart("flipkart"),
+	custApp("custApp"),
 	Custom("Custom");
 
 

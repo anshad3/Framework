@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="flipcart sample tests" parallel="tests" verbose="5"
+<suite name="Login Testcases" parallel="tests" verbose="5"
 	thread-count="4">
 
 	<listeners>
@@ -19,7 +19,7 @@
 	<!--  <parameter name="Browser" value="Chrome" />
 		<parameter name="PerformTransactionSheet" value="BrowserSanityAMEX" /> -->
 		<classes>
-			<class name="com.flip.testcases.VerifyFlipLogin">
+			<class name="com.login.testcases.VerifycustLogin">
 				<methods>
 					<include name="performLogin"/>
 					<!--  <include name="performLoginExcel"/>-->

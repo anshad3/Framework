@@ -1,4 +1,4 @@
-package com.flip.testcases;
+package com.login.testcases;
 
 import java.util.Map;
 
@@ -17,24 +17,21 @@ import com.ca.base.BaseSuite;
 import com.ca.base.DriverFactory;
 import com.ca.base.pojos.WebDriverEnum;
 import com.ca.util.CommonUtil;
-import com.flip.pages.LoginActions;
-import com.flip.pages.LoginPage;
-//import com.ca.base.WebDriverEnum;
-//import com.ca.base.WebDriverEnum;
-//import com.flip.util.FlipkartInput;
+import com.login.pages.LoginActions;
+import com.login.pages.LoginPage;
 
-public class VerifyFlipLogin extends BaseSuite {
+public class VerifycustLogin extends BaseSuite {
 	
 	@Test     //(dataProvider = "createUser", description = "Functionality under test- Create Users")
 	public void performLogin() {
-	//	LoginPage loginAsAdmin = new LoginPage(WebDriverEnum.flipkart);
-		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.flipkart);
+	//	LoginPage loginAsAdmin = new LoginPage(WebDriverEnum.custApp);
+		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 		
 		loginAsAdmin.loginAsGA();
 }
 	/*@Test(dataProvider = "register1", description = "Functionality under test- register")
 	public void performLoginExcel(Map<String, String> testData) {
-LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.flipkart);
+LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 
      String email = testData.get("Email");
 String pwd = testData.get("password");

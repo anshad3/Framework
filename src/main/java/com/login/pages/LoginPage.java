@@ -1,4 +1,4 @@
-package com.flip.pages;
+package com.login.pages;
 
 
 	//package com.ca.am.pages.logins;
