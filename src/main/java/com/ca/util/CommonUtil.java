@@ -26,9 +26,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
 
-import com.ca.base.BaseSuite;
-import com.ca.base.reports.ReportLogger;
-import com.aventstack.extentreports.Status;;
+import com.aventstack.extentreports.Status;
+import com.base.BaseSuite;
+import com.base.reports.ReportLogger;;
 
 public class CommonUtil {
 

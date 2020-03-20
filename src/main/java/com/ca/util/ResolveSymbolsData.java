@@ -15,8 +15,8 @@ import java.util.Map.Entry;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.ca.base.BaseSuite;
-import com.ca.db_connection.util.DBConnections;
+import com.base.BaseSuite;
+import com.db_connection.util.DBConnections;
 import com.google.common.base.Strings;
 
 

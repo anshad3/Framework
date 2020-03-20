@@ -11,14 +11,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.Status;
-//import com.ca.am.pages.logins.LoginPage;
-//import com.ca.am.pages.logins.MasterLoginPage;
-//import com.ca.am.utilities.Utility;
-import com.ca.base.BasePage;
-import com.ca.base.BaseSuite;
-import com.ca.base.DriverFactory;
-import com.ca.base.pojos.WebDriverEnum;
-import com.ca.base.reports.ReportLogger;
+import com.base.BasePage;
+import com.base.BaseSuite;
+import com.base.DriverFactory;
+import com.base.pojos.WebDriverEnum;
+import com.base.reports.ReportLogger;
 
 public class LoginActions extends BasePage{
 	

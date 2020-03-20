@@ -12,10 +12,9 @@ import org.testng.annotations.DataProvider;
 
 import org.testng.annotations.Test;
 
-//import com.ca._3ds.backlog.util.GolfStoreInput;
-import com.ca.base.BaseSuite;
-import com.ca.base.DriverFactory;
-import com.ca.base.pojos.WebDriverEnum;
+import com.base.BaseSuite;
+import com.base.DriverFactory;
+import com.base.pojos.WebDriverEnum;
 import com.ca.util.CommonUtil;
 import com.login.pages.LoginActions;
 import com.login.pages.LoginPage;

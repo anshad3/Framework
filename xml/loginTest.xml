@@ -5,7 +5,7 @@
 	thread-count="4">
 
 	<listeners>
-		<listener class-name="com.ca.base.SITListener">
+		<listener class-name="com.base.SITListener">
 		</listener>
 	</listeners>
 

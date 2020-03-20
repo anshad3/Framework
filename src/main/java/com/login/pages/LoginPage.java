@@ -9,9 +9,9 @@ package com.login.pages;
 	import org.openqa.selenium.support.PageFactory;
 	import org.openqa.selenium.support.ui.WebDriverWait;
 
-	import com.ca.base.BasePage;
-	import com.ca.base.DriverFactory;
-	import com.ca.base.pojos.WebDriverEnum;
+import com.base.BasePage;
+import com.base.DriverFactory;
+import com.base.pojos.WebDriverEnum;
 
 	public class LoginPage  extends BasePage{
 		
