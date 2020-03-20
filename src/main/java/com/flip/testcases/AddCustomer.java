@@ -7,12 +7,13 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
-import com.ca.base.pojos.WebDriverEnum;
-import com.ca.base.reports.ReportLogger;
+import com.base.BaseSuite;
+import com.base.pojos.WebDriverEnum;
+import com.base.reports.ReportLogger;
 import com.ca.util.CommonUtil;
 import com.flip.pages.AddCustomerActions;
 
-public class AddCustomer {
+public class AddCustomer extends BaseSuite{
 
 	
 	@Test(dataProvider = "addCustomer", description = "Functionality under test- Add Customer")

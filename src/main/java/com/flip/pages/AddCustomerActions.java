@@ -7,12 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.Status;
-import com.ca.base.BasePage;
-import com.ca.base.reports.ReportLogger;
+import com.base.BasePage;
+import com.base.reports.ReportLogger;
 
 public class AddCustomerActions extends BasePage{
 	private WebDriver driver;
-	private static Logger writeLogAs = LogManager.getLogger(LoginActions.class.getSimpleName());
+	private static Logger writeLogAs = LogManager.getLogger(AddCustomerActions.class.getSimpleName());
 	
 	public AddCustomerActions() {
 		this.driver = driver;
