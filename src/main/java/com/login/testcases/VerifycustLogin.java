@@ -28,14 +28,15 @@ public class VerifycustLogin extends BaseSuite {
 		
 		loginAsAdmin.loginAsGA();
 }
-	/*@Test(dataProvider = "register1", description = "Functionality under test- register")
-	public void performLoginExcel(Map<String, String> testData) {
+	@Test(dataProvider = "register1", description = "Functionality under test- register")
+	public void performInvalidLogin(Map<String, String> testData) {
 LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 
      String email = testData.get("Email");
 String pwd = testData.get("password");
+String invalidmsg=testData.get("invmsg");
 
-		loginAsAdmin.LoginExcel(email, pwd);
+		loginAsAdmin.InvalidLogin(email, pwd,invalidmsg);
 		
 	}
 	
@@ -44,6 +45,25 @@ String pwd = testData.get("password");
 	public Object[][] readUserTestCaseData(ITestContext testContext) throws Exception {
 		return new CommonUtil().getInputData(testContext, "register", "testexcelSheet");
 	}
-	*/
+	
+	
+	@Test(dataProvider = "register2", description = "Functionality under test- register")
+	public void verifyCustName(Map<String, String> testData) {
+LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
+
+
+String custname=testData.get("dashboard");
+
+		loginAsAdmin.verifyCustName(custname);
+		
+	}
+	
+
+	@DataProvider(name = "register2")
+	public Object[][] readUserTestCaseData2(ITestContext testContext) throws Exception {
+		return new CommonUtil().getInputData(testContext, "register", "testexcelSheet2");
+	}
+	
+	
 	
 }

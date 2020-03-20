@@ -12,17 +12,18 @@
 	
 	
 	<test name="LoginToApplication">
-		<!-- <parameter name="register" value="data/register.xlsx" />
+		 <parameter name="register" value="data/register.xlsx" />
 	
-	<parameter name="testexcelSheet" value="testexcel" /> -->
-		
+	<parameter name="testexcelSheet" value="testexcel" /> 
+		<parameter name="testexcelSheet2" value="custName" /> 
 	<!--  <parameter name="Browser" value="Chrome" />
 		<parameter name="PerformTransactionSheet" value="BrowserSanityAMEX" /> -->
 		<classes>
 			<class name="com.login.testcases.VerifycustLogin">
 				<methods>
 					<include name="performLogin"/>
-					<!--  <include name="performLoginExcel"/>-->
+					  <include name="performInvalidLogin"/>
+					    <include name="verifyCustName"/>
 				</methods>
 			</class>
 		</classes>
