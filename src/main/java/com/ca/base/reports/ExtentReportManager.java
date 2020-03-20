@@ -236,7 +236,7 @@ public class ExtentReportManager {
 		if(extentreporter==null){
 		
 			if(strExtenReportFileName==null){
-				strExtenReportFileName = ""+File.separator+"TestResult"+File.separator+"TestReport"+File.separator+"SITAutomation.html";
+				strExtenReportFileName = ""+File.separator+"TestResult"+File.separator+"TestReport"+File.separator+"Automation.html";
 			}
 			
 			if(strExtenReportFileName==null){
