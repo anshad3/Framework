@@ -26,17 +26,17 @@ package com.flip.pages;
 		}
 
 		
-		@FindBy(xpath="//A[@class='account-header-menu-item__signin-register-link']") private WebElement orgNameText;
-		@FindBy(xpath="//INPUT[@id='signInBtn']") private WebElement logInBtn;
-		@FindBy(xpath="//INPUT[@id='login_email']") private WebElement userNameText;
-		@FindBy(xpath="//INPUT[@id='login_password']") private WebElement passwordText;
+		//@FindBy(xpath="//A[@class='account-header-menu-item__signin-register-link']") private WebElement orgNameText;
+		@FindBy(xpath="//BUTTON[@class='btn btn-lg btn-primary btn-block'][text()='Sign in']") private WebElement logInBtn;
+		@FindBy(xpath="//INPUT[@id='username']") private WebElement userNameText;
+		@FindBy(xpath="//INPUT[@id='password']") private WebElement passwordText;
 		
-		@FindBy(xpath="//a[contains(text(),'Logout')]") private WebElement logOutLink;
+		@FindBy(xpath="(//A[text()='Logout'])[1]") private WebElement logOutLink;
 		
-		public void clickOrgName() {
+	/*	public void clickOrgName() {
 			//orgNameText.clear();
 			orgNameText.click();
-		}
+		}*/
 		public void clickLoginBtn() {
 			logInBtn.click();
 		}

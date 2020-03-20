@@ -33,7 +33,7 @@ public class VerifyFlipLogin extends BaseSuite {
 		loginAsAdmin.loginAsGA();
 	
 }
-	@Test(dataProvider = "register1", description = "Functionality under test- register")
+	/*@Test(dataProvider = "register1", description = "Functionality under test- register")
 	public void performLoginExcel(Map<String, String> testData) {
 LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.flipkart);
 
@@ -50,6 +50,6 @@ String pwd = testData.get("password");
 	public Object[][] readUserTestCaseData(ITestContext testContext) throws Exception {
 		return new CommonUtil().getInputData(testContext, "register", "testexcelSheet");
 	}
-	
+	*/
 	
 }

@@ -59,7 +59,7 @@ public class LoginActions extends BasePage{
 			Long threadId = Long.valueOf(Thread.currentThread().getId());
 			WebDriverEnum driverEnum = DriverFactory.threadToCurrentDriverMap.get(threadId);
 		//	Thread.sleep(5000);
-			gaLogin.clickOrgName();
+			//gaLogin.clickOrgName();
 			
 			ReportLogger.logScreenShot(Status.PASS, "Screenshot", driverEnum);
 			//writeLogAs.info("Navigating to the 'Userlogin' page");
@@ -85,7 +85,7 @@ public class LoginActions extends BasePage{
 	}
 	
 	
-	public void LoginExcel( String Email, String pwd) {
+/*	public void LoginExcel( String Email, String pwd) {
 		System.out.println("inside loginExcelmethod");
 		LoginPage gaLogin = new LoginPage(WebDriverEnum.flipkart);
 		driver.get(BaseSuite.caPropMap.get("gaurl"));
@@ -96,7 +96,7 @@ public class LoginActions extends BasePage{
 		
 		
 	}
-	
+	*/
 	/*public void loginAsMA(String password) {
 		MasterLoginPage maLogin = new MasterLoginPage(WebDriverEnum.flipkart);
 		writeLogAs.info("Logging in as MA");

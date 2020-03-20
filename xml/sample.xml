@@ -11,45 +11,21 @@
 
 	
 	
-	<test name="To Verify login page_viaproperties_flipkart">
-		<parameter name="register" value="data/register.xlsx" />
+	<test name="LoginToApplication">
+		<!-- <parameter name="register" value="data/register.xlsx" />
 	
-	<parameter name="testexcelSheet" value="testexcel" />
+	<parameter name="testexcelSheet" value="testexcel" /> -->
 		
 	<!--  <parameter name="Browser" value="Chrome" />
 		<parameter name="PerformTransactionSheet" value="BrowserSanityAMEX" /> -->
 		<classes>
 			<class name="com.flip.testcases.VerifyFlipLogin">
 				<methods>
-					<!--  <include name="performLogin"/>-->
-					<include name="performLoginExcel"/>
+					<include name="performLogin"/>
+					<!--  <include name="performLoginExcel"/>-->
 				</methods>
 			</class>
 		</classes>
 	</test>
-	<!-- <test name="BTo Verify login page_viaExcel_flipkart">
-		<parameter name="3DSDataFile" value="data/sit/local/3DS/Sanity/BrowserFlowFirefox_Sanity.xlsx" />
-		<parameter name="Browser" value="Firefox" />
-		<parameter name="PerformTransactionSheet" value="BrowserSanityAMEX" />
-		<classes>
-			<class name="com.flip.testcases.VerifyFlipLogin">
-				<methods>
-					<include name="performLoginExcel"/>
-				</methods>
-			</class>
-		</classes>
-	</test> -->
-	<!-- <test name="BrowserTransaction3DS2.0 BrowserSanityAMEX_IE">
-		<parameter name="3DSDataFile" value="data/sit/local/3DS/Sanity/BrowserFlowIE_Sanity.xlsx" />
-		<parameter name="Browser" value="IE" />
-		<parameter name="PerformTransactionSheet" value="BrowserSanityAMEX" />
-		<classes>
-			<class name="com.ca._3ds.txn.testcases.BrowserFlowTestCase">
-				<methods>
-					<include name="performTransaction"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
- -->
+	
 </suite>
