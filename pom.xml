@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.ca.sit</groupId>
-	<artifactId>sit-automation</artifactId>
+	<groupId>com.framework</groupId>
+	<artifactId>automation</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>sit-automation</name>
+	<name>automation</name>
 	<url>http://maven.apache.org</url>
 
 	<build>
@@ -42,10 +42,10 @@
 			<name>maven Repository</name>
 			<url>https://repo.maven.apache.org/maven2</url>
 		</repository>
-		<repository>
+	<!-- 	<repository>
 			<id>isl-dsdc.ca.com</id>
 			<url>http://isl-dsdc.ca.com/artifactory/maven-repo</url>
-		</repository>
+		</repository> -->
 
 
 	</repositories>
@@ -235,11 +235,11 @@
 			<artifactId>jcabi-xml</artifactId>
 			<version>0.14</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
 			<version>6.1.0</version>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
@@ -253,6 +253,12 @@
 			<version>1.4.4</version>
 		</dependency>
 
+
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.12.1</version>
+</dependency>
 
 
 
@@ -315,11 +321,11 @@
 
 		<!-- API Automationn POM -->
 
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>ca.tds2.acs</groupId>
 			<artifactId>ca-acs-data</artifactId>
 			<version>${tds2-commons.version}</version>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>com.nimbusds</groupId>
@@ -344,11 +350,11 @@
 			<artifactId>java-jwt</artifactId>
 			<version>3.8.3</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>ca.tds2.acs</groupId>
 			<artifactId>ca-acs-data</artifactId>
 			<version>${tds2-commons.version}</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.everit.json</groupId>
 			<artifactId>org.everit.json.schema</artifactId>

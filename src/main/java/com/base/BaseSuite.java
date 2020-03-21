@@ -184,7 +184,7 @@ public class BaseSuite {
 	@AfterSuite
 	public void afterSuite(ITestContext testContext) {
 		System.out.println("Closing the appium server");
-		AppiumFactory.closeAppium();
+		//AppiumFactory.closeAppium();
 		//DBConnections.closeConnection();
 	}
 	

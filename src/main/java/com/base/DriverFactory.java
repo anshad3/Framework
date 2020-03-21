@@ -70,7 +70,7 @@ public class DriverFactory {
 		WebDriver driver = enumDriverMap.get(driverEnum);
 		if(driver==null){					
 			
-			driver = AppiumFactory.getAppiumDriver(deviceName, appName);		
+		//	driver = AppiumFactory.getAppiumDriver(deviceName, appName);		
 			enumDriverMap.put(driverEnum, driver);
 			
 		}
@@ -109,7 +109,7 @@ public class DriverFactory {
 				
 			}*/
 			BrowserEnum browserEnum = BaseSuite.threadBrowserMap.get(threadId);
-			driver = AppiumFactory.getAppiumBrowserDriver(deviceName, browserEnum);		
+		//	driver = AppiumFactory.getAppiumBrowserDriver(deviceName, browserEnum);		
 			enumDriverMap.put(driverEnum, driver);
 			
 		}
