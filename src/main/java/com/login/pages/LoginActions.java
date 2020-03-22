@@ -18,6 +18,7 @@ import com.base.DriverFactory;
 import com.base.pojos.WebDriverEnum;
 import com.base.reports.ReportLogger;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 public class LoginActions extends BasePage{
 	
 	private WebDriver driver;
@@ -103,7 +104,7 @@ public class LoginActions extends BasePage{
 	}
 	
 	
-	public void verifyCustName(String cust)
+	public void PerformVerifyCustName(String cust)
 	{
 		
 		LoginPage gaLogin = new LoginPage(WebDriverEnum.custApp);
@@ -159,6 +160,193 @@ public class LoginActions extends BasePage{
 			ReportLogger.logInfo(Status.PASS, Header + " displayed");
 			ReportLogger.logScreenShot(Status.PASS, "Screenshot", driverEnum);
 	}
+	
+	
+	public void VerifyLoginEmptyCredentials()
+	{
+		LoginPage gaLogin = new LoginPage(WebDriverEnum.custApp);
+		writeLogAs.info("Logging in as customerDashboard");
+		
+			//driver.get(Utility.getValueFromProperty(System.getProperty("user.dir") + File.separator + "am.properties", "gaurl"));
+			driver.get(BaseSuite.caPropMap.get("gaurl"));
+		//	ReportLogger.logScreenShot(Status.PASS, "LoginPageScreenshot", driverEnum);
+			gaLogin.clickLoginBtn();
+			writeLogAs.info("Clicked Login Button");
+			//String dashview=driver.findElement(By.xpath("//B[text()='Hello Customer!!!']")).
+			ReportLogger.logScreenShot(Status.PASS, "LoginPageScreenshot", driverEnum);
+					///	boolean isPresent = false;
+					try {
+						//System.out.println("getsize" + driver.findElement(By.xpath("//H2[@class='form-signin-heading'][text()='Please sign in']")).getSize());
+						if(driver.findElement(By.xpath("//B[text()='Hello Customer!!!']")).getSize() != null) {
+							 
+									System.out.println("element present");
+									boolean elementPresent= false;
+									Assert.assertTrue(elementPresent, "Able to Login with empty Credentials");
+								}
+									else {
+										System.out.println("element absent");
+										boolean elementPresent= true;
+									}
+						
+						//isPresent = true;
+					} catch (Exception e) {
+						ReportLogger.logInfo(Status.PASS," Unable to login with Empty Credentials");
+						//boolean elementPresent= true;
+						System.out.println(e.toString());
+						//Assert.assertTrue(elementPresent, "UnAble to Login with empty Credentials");
+					}
+					//ReportLogger.logInfo(Status.PASS," Unable to login with Empty Credentials");
+					
+					/*if(isPresent=true) {
+						System.out.println("element present");
+					}
+						else {
+							System.out.println("element absent");
+						}
+					*/
+					
+					//System.out.println("isPresent" + isPresent);
+					//Assert.assertFalse(true, "Able to Login with empty Credentials");
+													
+	}
+	
+	
+	
+	public void verifyLoginTitle()
+	{
+	
+		//LoginPage gaLogin = new LoginPage(WebDriverEnum.custApp);
+		writeLogAs.info("Logging in as customerDashboard");
+		
+			//driver.get(Utility.getValueFromProperty(System.getProperty("user.dir") + File.separator + "am.properties", "gaurl"));
+			driver.get(BaseSuite.caPropMap.get("gaurl"));
+			String actualTitle = driver.getTitle();
+			System.out.println("actualTitle" + actualTitle);
+			String expectedTitle = "Please sign in";
+			if(actualTitle.equalsIgnoreCase(expectedTitle)) {
+				System.out.println("Title Matched");
+			ReportLogger.logInfo(Status.PASS,actualTitle +" --Title Matching");
+			ReportLogger.logScreenShot(Status.PASS, "Title Matching", driverEnum);
+			}
+			else
+			{
+				System.out.println("Title didn't match");
+			ReportLogger.logScreenShot(Status.FAIL, "Title didn't match", driverEnum);
+			}
+		
+	}
+	
+	
+	public void loginCustNameWithoutPWD() {
+		LoginPage gaLogin = new LoginPage(WebDriverEnum.custApp);
+		writeLogAs.info("Logging in as customerDashboard");
+		
+			//driver.get(Utility.getValueFromProperty(System.getProperty("user.dir") + File.separator + "am.properties", "gaurl"));
+			driver.get(BaseSuite.caPropMap.get("gaurl"));
+			//String loginOrg = BaseSuite.caPropMap.get("gaOrg");
+			String username = BaseSuite.caPropMap.get("gaName");
+			gaLogin.setUserName(username);
+			//gaLogin.setPassword(password);
+			//ReportLogger.logScreenShot(Status.PASS, "Screenshot", driverEnum);
+			gaLogin.clickLoginBtn();
+			writeLogAs.info("Clicked Login Button");
+			//String dashview=driver.findElement(By.xpath("//B[text()='Hello Customer!!!']")).
+			ReportLogger.logScreenShot(Status.PASS, "LoginPageScreenshot", driverEnum);
+					///	boolean isPresent = false;
+					try {
+						//System.out.println("getsize" + driver.findElement(By.xpath("//H2[@class='form-signin-heading'][text()='Please sign in']")).getSize());
+						if(driver.findElement(By.xpath("//B[text()='Hello Customer!!!']")).getSize() != null) {
+							 
+									System.out.println("element present");
+									boolean elementPresent= false;
+									Assert.assertTrue(elementPresent, "Able to Login with empty password");
+								}
+									else {
+										System.out.println("element absent");
+										boolean elementPresent= true;
+									}
+						
+						//isPresent = true;
+					} catch (Exception e) {
+						ReportLogger.logInfo(Status.PASS," Unable to login with Empty password");
+						//boolean elementPresent= true;
+						System.out.println(e.toString());
+						//Assert.assertTrue(elementPresent, "UnAble to Login with empty Credentials");
+					}
+			
+			
+	}
+	
+	
+	public void loginPWDWithoutCustName() {
+		LoginPage gaLogin = new LoginPage(WebDriverEnum.custApp);
+		writeLogAs.info("Logging in as customerDashboard");
+		
+			//driver.get(Utility.getValueFromProperty(System.getProperty("user.dir") + File.separator + "am.properties", "gaurl"));
+			driver.get(BaseSuite.caPropMap.get("gaurl"));
+			//String loginOrg = BaseSuite.caPropMap.get("gaOrg");
+			//String username = BaseSuite.caPropMap.get("gaName");
+			String password = BaseSuite.caPropMap.get("gaPwd");
+			//gaLogin.setUserName(username);
+			gaLogin.setPassword(password);
+			//ReportLogger.logScreenShot(Status.PASS, "Screenshot", driverEnum);
+			gaLogin.clickLoginBtn();
+			writeLogAs.info("Clicked Login Button");
+			//String dashview=driver.findElement(By.xpath("//B[text()='Hello Customer!!!']")).
+			ReportLogger.logScreenShot(Status.PASS, "LoginPageScreenshot", driverEnum);
+					///	boolean isPresent = false;
+					try {
+						//System.out.println("getsize" + driver.findElement(By.xpath("//H2[@class='form-signin-heading'][text()='Please sign in']")).getSize());
+						if(driver.findElement(By.xpath("//B[text()='Hello Customer!!!']")).getSize() != null) {
+							 
+									System.out.println("element present");
+									boolean elementPresent= false;
+									Assert.assertTrue(elementPresent, "Able to Login with empty username");
+								}
+									else {
+										System.out.println("element absent");
+										boolean elementPresent= true;
+									}
+						
+						//isPresent = true;
+					} catch (Exception e) {
+						ReportLogger.logInfo(Status.PASS," Unable to login with Empty username");
+						//boolean elementPresent= true;
+						System.out.println(e.toString());
+						//Assert.assertTrue(elementPresent, "UnAble to Login with empty Credentials");
+					}
+			
+			
+	}
+	/*public void VerifyPlaceHolder() {
+		
+		//LoginPage gaLogin = new LoginPage(WebDriverEnum.custApp);
+	//	writeLogAs.info("Logging in as customerDashboard");
+		
+			//driver.get(Utility.getValueFromProperty(System.getProperty("user.dir") + File.separator + "am.properties", "gaurl"));
+			driver.get(BaseSuite.caPropMap.get("gaurl"));
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			//String custplaceholder=driver.findElement(By.xpath("//INPUT[@placeholder='Username']")).
+			//System.out.println("cust" + custplaceholder);
+			
+			String pwdplaceholder=driver.findElement(By.xpath("//INPUT[@placeholder='Password']")).getTagName();
+			System.out.println("cust" + custplaceholder);
+			System.out.println(pwdplaceholder);
+			String expectedcust= "Username";
+			String expectedpwd= "Password";
+			Assert.assertEquals(custplaceholder,expectedcust);
+			Assert.assertEquals(pwdplaceholder,expectedpwd);
+			ReportLogger.logInfo(Status.PASS, custplaceholder + " -- placeholder of username");
+			ReportLogger.logInfo(Status.PASS, expectedpwd + " -- placeholder of Password");
+			
+			ReportLogger.logScreenShot(Status.PASS, "placeholderScreenshot", driverEnum);
+		
+	}*/
 	
 	
 	/*public void loginAsMA(String password) {

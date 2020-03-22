@@ -12,9 +12,11 @@ import org.testng.annotations.DataProvider;
 
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.base.BaseSuite;
 import com.base.DriverFactory;
 import com.base.pojos.WebDriverEnum;
+import com.base.reports.ReportLogger;
 import com.ca.util.CommonUtil;
 import com.login.pages.LoginActions;
 import com.login.pages.LoginPage;
@@ -54,7 +56,7 @@ LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 
 String custname=testData.get("dashboard");
 
-		loginAsAdmin.verifyCustName(custname);
+		loginAsAdmin.PerformVerifyCustName(custname);
 		
 	}
 	
@@ -65,7 +67,7 @@ String custname=testData.get("dashboard");
 	}
 	
 	@Test(dataProvider = "register3", description = "Functionality under test- register")
-	public void verifyLoginHeader(Map<String, String> testData)
+	public void PerformToverifyLoginHeader(Map<String, String> testData)
 	{
 		
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
@@ -82,6 +84,46 @@ String custname=testData.get("dashboard");
 		return new CommonUtil().getInputData(testContext, "register", "testexcelSheet3");
 	}
 		
+	@Test
+	public void LoginEmptyCredentials()
+	{
+		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
+		loginAsAdmin.VerifyLoginEmptyCredentials();
+		//ReportLogger.logInfo(Status.PASS," Unable to login with Empty Credentials");
+	}
+	@Test
+	public void PerformVerifyLoginTitle()
+	{
+		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
+		loginAsAdmin.verifyLoginTitle();	
+	}
+	
+	
+	@Test
+	public void PerformloginCustNameWithoutPWD()
+	{
+		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
+		loginAsAdmin.loginCustNameWithoutPWD();
+		//ReportLogger.logInfo(Status.PASS," Unable to login with Empty Credentials");
+	}
+	
+	@Test
+	public void PerformloginPWDWithoutCustName()
+	{
+		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
+		loginAsAdmin.loginPWDWithoutCustName();
+		//ReportLogger.logInfo(Status.PASS," Unable to login with Empty Credentials");
+	}
+	
+	
+	
+	/*@Test
+	public void PerformVerifyPlaceHolder()
+	{
+		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
+		loginAsAdmin.VerifyPlaceHolder();
+		//ReportLogger.logInfo(Status.PASS," Unable to login with Empty Credentials");
+	}*/
 	}
 	
 	

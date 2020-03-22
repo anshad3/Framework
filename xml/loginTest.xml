@@ -21,16 +21,19 @@
 		<parameter name="PerformTransactionSheet" value="BrowserSanityAMEX" /> -->
 		<classes>
 			<class name="com.login.testcases.VerifycustLogin">
+			
 				<methods>
-					<include name="performLogin"/>
+					 <include name="performLogin"/>
 					  <include name="performInvalidLogin"/>
 					    <include name="verifyCustName"/>
 					    
-					     <include name="verifyLoginHeader"/>
-					     <!--  <include name="loginCustNameWithoutPWD"/>
-					       <include name="loginPWDWithoutCustName"/>
+					     <include name="PerformToverifyLoginHeader"/>
+					      <include name="PerformloginCustNameWithoutPWD"/>
+					       <include name="PerformloginPWDWithoutCustName"/> 
 					        <include name="LoginEmptyCredentials"/>
-					         <include name="verifyLoginTitle"/> -->
+					        <include name="PerformVerifyLoginTitle"/>  
+					        
+					        <!--  <include name="PerformVerifyPlaceHolder"/> --> 
 				</methods>
 			</class>
 		</classes>
