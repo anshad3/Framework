@@ -47,11 +47,11 @@ public class HomeActions  extends BasePage{
 	public void VerifyNavigationFromAddCustomerPageToHomePage()  {
 		
 		NavigateToAddCustomerLink();
-		//validating if customer Id textbox is present in Add Customer Page
 		
+		//validating if customer Id textbox is present in Add Customer Page
 		AddCustomerPage addCustObj = new AddCustomerPage(WebDriverEnum.custApp);
 		boolean customerIdTextBoxPresence= addCustObj.checkCustomerIdTxtBoxDisplayed();
-		//boolean customerIdTextBoxPresence= driver.findElement(By.xpath("//*[@id='custId']")).isDisplayed();
+
 		if(customerIdTextBoxPresence) {
 			ReportLogger.logInfo(Status.PASS, "Successfully navigated to Add Customer Page");
 		}
@@ -110,12 +110,7 @@ public class HomeActions  extends BasePage{
 			ReportLogger.logInfo(Status.PASS, "Successfully navigated to Login Page");
 		}
 		else {ReportLogger.logInfo(Status.FAIL, "Failed to Navigate to Login Page");}
-   
        } 
-       
-       public void verifyLogOutFunctionalityFromAddCustomerPage() {
-    	   
-       }
        
       
 	
