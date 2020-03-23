@@ -28,12 +28,18 @@ public class ShowCustomersPage extends BasePage{
 	@FindBy(xpath="//h3[text()='Show All Customers']") 
 	private WebElement allCustomersTxt;
 	
+	@FindBy(linkText="Logout") private WebElement logOutLink;
+	
 	public boolean showAllCustomersHeaderValidation() {
 		boolean flag=false;
 		if(allCustomersTxt.isDisplayed()) {
 			flag=true;
 		}
 		return flag;
+	}
+	
+	public void clicklogOutLink() {
+		logOutLink.click();
 	}
 	
 }

@@ -52,6 +52,14 @@ import com.base.pojos.WebDriverEnum;
 		public void clickLogoutLink() {
 			logOutLink.click();
 		}
+		
+		public boolean verifySignInButtonDisplayed() {
+			boolean flag=false;
+			if(logInBtn.isDisplayed()) {
+				flag=true;
+			}
+			return flag;
+		}
 	}
 
 

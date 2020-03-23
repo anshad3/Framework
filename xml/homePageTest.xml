@@ -10,15 +10,26 @@
 	</listeners>
 
 
-	<test name="homePageNavigation">
+	<test name="homePageNavigationFromAddCustomer">
 		
 		<classes>
 			<class name="com.login.testcases.HomeTestCases">
 				<methods>
-					<include name="verifyHomeNavigation"/>
+					<include name="verifyHomeNavigationFromAddCustomer"/>
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> 
+	
+	 <test name="homePageNavigationFromShowCustomer">
+		
+		<classes>
+			<class name="com.login.testcases.HomeTestCases">
+				<methods>
+					<include name="verifyHomeNavigationFromShowCustomer"/>
+				</methods>
+			</class>
+		</classes>
+	</test>  
 	
 </suite>

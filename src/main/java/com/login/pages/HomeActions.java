@@ -37,17 +37,21 @@ public class HomeActions  extends BasePage{
 	}
 	
 	
+	public void NavigateToAddCustomerLink() {
+		HomePage homePageObj = new HomePage(WebDriverEnum.custApp);
+		homePageObj.clickaddCustomerLink();
+		//Navigation to add customer link
+		ReportLogger.logScreenShot(Status.PASS, "Verify navigation to Add Customer link", WebDriverEnum.custApp);
+	}
+	
 	public void VerifyNavigationFromAddCustomerPageToHomePage()  {
 		
-		HomePage homePageObj = new HomePage(WebDriverEnum.custApp);
-	
-		homePageObj.clickaddCustomerLink();
-
-		//verify navigation to add customer link
-		ReportLogger.logScreenShot(Status.PASS, "Verify navigation to Add Customer link", WebDriverEnum.custApp);
-		//AddCustomerPage addCustObj = new AddCustomerPage();
-		//boolean customerIdTextBoxPresence= addCustObj.checkCustomerIdTxtBoxDisplayed();
-		boolean customerIdTextBoxPresence= driver.findElement(By.xpath("//*[@id='custId']")).isDisplayed();
+		NavigateToAddCustomerLink();
+		//validating if customer Id textbox is present in Add Customer Page
+		
+		AddCustomerPage addCustObj = new AddCustomerPage(WebDriverEnum.custApp);
+		boolean customerIdTextBoxPresence= addCustObj.checkCustomerIdTxtBoxDisplayed();
+		//boolean customerIdTextBoxPresence= driver.findElement(By.xpath("//*[@id='custId']")).isDisplayed();
 		if(customerIdTextBoxPresence) {
 			ReportLogger.logInfo(Status.PASS, "Successfully navigated to Add Customer Page");
 		}
@@ -63,6 +67,7 @@ public class HomeActions  extends BasePage{
 	    	//validate navigation to home is successful
 			ReportLogger.logScreenShot(Status.PASS, "Verify navigation to Home", WebDriverEnum.custApp);
 			
+			//validating if hello customer text is displayed in home page
 			boolean helloCustTextPresence= homePageObj.checkHelloCustomerTextDisplayed();
 			if(helloCustTextPresence) {
 				ReportLogger.logInfo(Status.PASS, "Successfully navigated to Home page");
@@ -70,24 +75,48 @@ public class HomeActions  extends BasePage{
 			else {ReportLogger.logInfo(Status.FAIL, "Failed to navigate to Home page");}
 	    }
 	    
+	    public void NavigateToShowCustomersLink() {
+	    	HomePage homePageObj = new HomePage(WebDriverEnum.custApp);
+			homePageObj.clickshowCustomersLink();
+			//Navigation to show customer link
+			ReportLogger.logScreenShot(Status.PASS, "Verify navigation to Show Customers link", WebDriverEnum.custApp);
+	    }
 	    
         public void VerifyNavigationFromShowCustomerPageToHomePage() {
 		
-		HomePage homePageObj = new HomePage(WebDriverEnum.custApp);
-		homePageObj.clickshowCustomersLink();
-		
-		//verify navigation to show customer link
-		ReportLogger.logScreenShot(Status.PASS, "Verify navigation to Show Customers link", WebDriverEnum.custApp);
+        NavigateToShowCustomersLink();
 		
 		ShowCustomersPage showCustObj = new ShowCustomersPage(WebDriverEnum.custApp);
-		boolean customerIdTextBoxPresence= showCustObj.showAllCustomersHeaderValidation();
 		
-		if(customerIdTextBoxPresence) {
+		//validating if show all customer header is present in show customers page
+		boolean showAllCustomersHeaderPresence= showCustObj.showAllCustomersHeaderValidation();
+		
+		if(showAllCustomersHeaderPresence) {
 			ReportLogger.logInfo(Status.PASS, "Successfully navigated to Show Customers Page");
 		}
 		else {ReportLogger.logInfo(Status.FAIL, "Failed to Navigate to Show Customers Page");}
 		
 		VerifyNavigationToHomePage();
 	}
+        
+       public void verifyLogOutFunctionality() {
+
+   		HomePage homePageObj = new HomePage(WebDriverEnum.custApp);
+   		homePageObj.clicklogOutLink();
+   		ReportLogger.logScreenShot(Status.PASS, "Verify navigation to login screen after clicking on LogOut", WebDriverEnum.custApp);
+   		LoginPage loginPageObj = new LoginPage(WebDriverEnum.custApp);
+   		boolean loginButtonPresence= loginPageObj.verifySignInButtonDisplayed();
+   		if(loginButtonPresence) {
+			ReportLogger.logInfo(Status.PASS, "Successfully navigated to Login Page");
+		}
+		else {ReportLogger.logInfo(Status.FAIL, "Failed to Navigate to Login Page");}
+   
+       } 
+       
+       public void verifyLogOutFunctionalityFromAddCustomerPage() {
+    	   
+       }
+       
+      
 	
 }

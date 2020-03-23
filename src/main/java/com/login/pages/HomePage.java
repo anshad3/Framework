@@ -30,7 +30,7 @@ public class HomePage extends BasePage{
 		
 		@FindBy(xpath="//b[text()='Hello Customer!!!']") private WebElement helloCustomerText;
 		
-		
+		@FindBy(linkText="Logout") private WebElement logOutLink;
 		
 		public void clickHomeLink() {
 			homeLink.click();
@@ -51,4 +51,10 @@ public class HomePage extends BasePage{
 			}
 			return flag;
 		}
+		
+
+		public void clicklogOutLink() {
+			logOutLink.click();
+		}
+		
 }
