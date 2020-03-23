@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Home Testcases" parallel="false" verbose="5"
+	>
+
+	<listeners>
+		<listener class-name="com.base.SITListener">
+		</listener>
+	</listeners>
+
+
+	<test name="homePageNavigation">
+		
+		<classes>
+			<class name="com.login.testcases.HomeTestCases">
+				<methods>
+					<include name="verifyHomeNavigation"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+</suite>
