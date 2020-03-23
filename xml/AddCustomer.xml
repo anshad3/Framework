@@ -2,9 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="RangeConfig" parallel="tests" thread-count="20">
-
-	<listeners>
-		<listener class-name="com.ca.base.SITListener">
+<listeners>
+		<listener class-name="com.base.SITListener">
 		</listener>
 	</listeners>
 	
@@ -14,9 +13,9 @@
 		<parameter name="addCustomerSheet" value="Add_Customer" />
 	<classes>
 		<class
-			name="com.ca.tmadmin.rangeconfig.testcases.CustomResourcesTab3DS2PageTestcase">
+			name="com.flip.testcases.AddCustomer">
 			<methods>
-			<include name="verify3DS2CustomResourcesConfig" />
+			<include name="performAddCustomer" />
 			</methods>
 		</class>
 	</classes>

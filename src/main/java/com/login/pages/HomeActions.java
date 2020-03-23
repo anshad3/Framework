@@ -42,7 +42,7 @@ public class HomeActions  extends BasePage{
 		
 		//verify navigation to add customer link
 		ReportLogger.logScreenShot(Status.PASS, "AddCustomerScreenshot", WebDriverEnum.custApp);
-		AddCustomerPage addCustObj = new AddCustomerPage();
+		AddCustomerPage addCustObj = new AddCustomerPage(WebDriverEnum.custApp);
 		boolean customerIdTextBoxPresence= addCustObj.checkCustomerIdTxtBoxDisplayed();
 		if(customerIdTextBoxPresence) {
 			ReportLogger.logInfo(Status.PASS, "Successfully navigated to add customer page");
