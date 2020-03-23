@@ -19,11 +19,14 @@ public class HomeTestCases extends BaseSuite {
 	
 	
 	@Test    
-	//verify navigation to home page after clicking on add customer and show cusomer
+	//verify navigation to home page after clicking on add customer and show customer
 	public void verifyHomeNavigation() {
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
+		//Login to application
 		loginAsAdmin.loginAsGA();
+		
 		HomeActions homeActionsObj = new HomeActions(WebDriverEnum.custApp);
+		//verifying navigation to home page after clicking on add customer and show customer
 		homeActionsObj.clickHomeLinkAndVerifyNavigation();
 		
 }

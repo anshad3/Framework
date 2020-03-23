@@ -41,6 +41,14 @@ public class AddCustomerPage extends BasePage{
 		submitBtn.click();
 	}
 	
+	public boolean checkCustomerIdTxtBoxDisplayed() {
+		boolean flag=false;
+		if(customerIdTxt.isDisplayed()) {
+			flag=true;
+		}
+		return flag;
+	}
+	
 	public void addANewCustomer(String customerId, String customerName) {
 		String expectedSuccesssMsg = "Successfully Added!!!";
 		

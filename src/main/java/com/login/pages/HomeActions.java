@@ -16,6 +16,7 @@ import com.base.DriverFactory;
 
 import com.base.pojos.WebDriverEnum;
 import com.base.reports.ReportLogger;
+import com.flip.pages.AddCustomerPage;
 
 public class HomeActions  extends BasePage{
 
@@ -41,7 +42,8 @@ public class HomeActions  extends BasePage{
 		
 		//verify navigation to add customer link
 		ReportLogger.logScreenShot(Status.PASS, "AddCustomerScreenshot", WebDriverEnum.custApp);
-		boolean customerIdTextBoxPresence=driver.findElement(By.xpath("//*[@id='custId']")).isDisplayed();
+		AddCustomerPage addCustObj = new AddCustomerPage();
+		boolean customerIdTextBoxPresence= addCustObj.checkCustomerIdTxtBoxDisplayed();
 		if(customerIdTextBoxPresence) {
 			ReportLogger.logInfo(Status.PASS, "Successfully navigated to add customer page");
 		}
