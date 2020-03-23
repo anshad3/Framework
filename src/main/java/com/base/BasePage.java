@@ -17,10 +17,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.ca.util.LogMode;
 import com.ca.util.Result;
 
-import io.appium.java_client.TouchAction;
+/*import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.PointOption;
+import io.appium.java_client.touch.offset.PointOption;*/
 
 import com.aventstack.extentreports.Status;
 import com.base.pojos.WebDriverEnum;
@@ -287,7 +287,7 @@ public class BasePage {
 		ele.sendKeys(text);
 	}
 	
-	public void scrollDownInMobileBrowser() {
+	/*public void scrollDownInMobileBrowser() {
 		Long threadId = new Long(Thread.currentThread().getId());
 		AndroidDriver driver = (AndroidDriver) DriverFactory.getDriver(threadId, "Android", WebDriverEnum.GolfStore2);
 
@@ -362,5 +362,5 @@ public class BasePage {
 				.waitAction(WaitOptions.waitOptions(Duration.ofMillis(2000))).moveTo(PointOption.point(endX, startY))
 				.release().perform();
 
-	}
+	}*/
 }

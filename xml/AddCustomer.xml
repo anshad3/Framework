@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="RangeConfig" parallel="tests" thread-count="20">
+
+	<listeners>
+		<listener class-name="com.ca.base.SITListener">
+		</listener>
+	</listeners>
+	
+	<parameter name="addCustomerExcel" value="data/AddCustomer.xlsx" />
+
+	<test name="verifyAddCustomer">
+		<parameter name="addCustomerSheet" value="Add_Customer" />
+	<classes>
+		<class
+			name="com.ca.tmadmin.rangeconfig.testcases.CustomResourcesTab3DS2PageTestcase">
+			<methods>
+			<include name="verify3DS2CustomResourcesConfig" />
+			</methods>
+		</class>
+	</classes>
+	</test>
+</suite>
