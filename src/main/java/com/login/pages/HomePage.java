@@ -28,6 +28,10 @@ public class HomePage extends BasePage{
 		
 		@FindBy(xpath="//a[contains(text(),'Show')]") private WebElement showCustomersLink;
 		
+		@FindBy(xpath="//b[text()='Hello Customer!!!']") private WebElement helloCustomerText;
+		
+		
+		
 		public void clickHomeLink() {
 			homeLink.click();
 		}
@@ -38,5 +42,13 @@ public class HomePage extends BasePage{
 		
 		public void clickshowCustomersLink() {
 			showCustomersLink.click();
+		}
+		
+		public boolean checkHelloCustomerTextDisplayed() {
+			boolean flag=false;
+			if(helloCustomerText.isDisplayed()) {
+				flag=true;
+			}
+			return flag;
 		}
 }

@@ -7,9 +7,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.Status;
 import com.base.BaseSuite;
 import com.base.DriverFactory;
 import com.base.pojos.WebDriverEnum;
+import com.base.reports.ReportLogger;
 import com.ca.util.CommonUtil;
 import com.login.pages.HomeActions;
 import com.login.pages.LoginActions;
@@ -18,19 +21,36 @@ import com.login.pages.LoginPage;
 public class HomeTestCases extends BaseSuite {
 	
 	
-	@Test    
-	//verify navigation to home page after clicking on add customer and show customer
-	public void verifyHomeNavigation() {
+	@Test (description = "Functionality under test- Home Navigations- Verify navigation to home page from Add Customer Page")
+	//verify navigation to home page after clicking on add customer
+	public void verifyHomeNavigationFromAddCustomer() {
+		ReportLogger.logInfo(Status.INFO, "Starting the test case : Verify navigation to Home Page from Add Customer Page");
+		ReportLogger.logInfo(Status.INFO, "Navigating to the Login page");
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 		//Login to application
 		loginAsAdmin.loginAsGA();
 		
 		HomeActions homeActionsObj = new HomeActions(WebDriverEnum.custApp);
-		//verifying navigation to home page after clicking on add customer and show customer
-		homeActionsObj.clickHomeLinkAndVerifyNavigation();
+		//verifying navigation to home page after clicking on add customer link
+		homeActionsObj.VerifyNavigationFromAddCustomerPageToHomePage();
+		ReportLogger.logInfo(Status.INFO, "Ending the test case");
 		
-}
+     }
 
 	
+	@Test (description = "Functionality under test- Home Navigations- Verify navigation to Home page from Show Customers Page")
+	//verify navigation to home page after clicking on add customer
+	public void verifyHomeNavigationFromShowCustomer() {
+		ReportLogger.logInfo(Status.INFO, "Starting the test case : Verify navigation to Home page from Show Customers Page");
+		ReportLogger.logInfo(Status.INFO, "Navigating to the Login page");
+		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
+		//Login to application
+		loginAsAdmin.loginAsGA();
+		
+		HomeActions homeActionsObj = new HomeActions(WebDriverEnum.custApp);
+		//verifying navigation to home page after clicking show customer link
+		homeActionsObj.VerifyNavigationFromShowCustomerPageToHomePage();
+		ReportLogger.logInfo(Status.INFO, "Ending the test case");
+      }
 	
 }

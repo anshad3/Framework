@@ -2,6 +2,7 @@ package com.login.pages;
 
 
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,6 +18,7 @@ import com.base.DriverFactory;
 import com.base.pojos.WebDriverEnum;
 import com.base.reports.ReportLogger;
 import com.flip.pages.AddCustomerPage;
+import com.flip.pages.ShowCustomersPage;
 
 public class HomeActions  extends BasePage{
 
@@ -35,36 +37,57 @@ public class HomeActions  extends BasePage{
 	}
 	
 	
-	public void clickHomeLinkAndVerifyNavigation() {
+	public void VerifyNavigationFromAddCustomerPageToHomePage()  {
 		
 		HomePage homePageObj = new HomePage(WebDriverEnum.custApp);
+	
 		homePageObj.clickaddCustomerLink();
-		
+
 		//verify navigation to add customer link
-		ReportLogger.logScreenShot(Status.PASS, "AddCustomerScreenshot", WebDriverEnum.custApp);
-		AddCustomerPage addCustObj = new AddCustomerPage();
-		boolean customerIdTextBoxPresence= addCustObj.checkCustomerIdTxtBoxDisplayed();
+		ReportLogger.logScreenShot(Status.PASS, "Verify navigation to Add Customer link", WebDriverEnum.custApp);
+		//AddCustomerPage addCustObj = new AddCustomerPage();
+		//boolean customerIdTextBoxPresence= addCustObj.checkCustomerIdTxtBoxDisplayed();
+		boolean customerIdTextBoxPresence= driver.findElement(By.xpath("//*[@id='custId']")).isDisplayed();
 		if(customerIdTextBoxPresence) {
-			ReportLogger.logInfo(Status.PASS, "Successfully navigated to add customer page");
+			ReportLogger.logInfo(Status.PASS, "Successfully navigated to Add Customer Page");
 		}
-		else {
-			ReportLogger.logInfo(Status.FAIL, "Failed to navigate to add customer page");
+		else {ReportLogger.logInfo(Status.FAIL, "Failed to navigate to add customer page");}
+		
+		VerifyNavigationToHomePage();
+	}
+	
+	    public void VerifyNavigationToHomePage() {
+	    	HomePage homePageObj = new HomePage(WebDriverEnum.custApp);
+	    	homePageObj.clickHomeLink();
 			
+	    	//validate navigation to home is successful
+			ReportLogger.logScreenShot(Status.PASS, "Verify navigation to Home", WebDriverEnum.custApp);
+			
+			boolean helloCustTextPresence= homePageObj.checkHelloCustomerTextDisplayed();
+			if(helloCustTextPresence) {
+				ReportLogger.logInfo(Status.PASS, "Successfully navigated to Home page");
+			}
+			else {ReportLogger.logInfo(Status.FAIL, "Failed to navigate to Home page");}
+	    }
+	    
+	    
+        public void VerifyNavigationFromShowCustomerPageToHomePage() {
+		
+		HomePage homePageObj = new HomePage(WebDriverEnum.custApp);
+		homePageObj.clickshowCustomersLink();
+		
+		//verify navigation to show customer link
+		ReportLogger.logScreenShot(Status.PASS, "Verify navigation to Show Customers link", WebDriverEnum.custApp);
+		
+		ShowCustomersPage showCustObj = new ShowCustomersPage(WebDriverEnum.custApp);
+		boolean customerIdTextBoxPresence= showCustObj.showAllCustomersHeaderValidation();
+		
+		if(customerIdTextBoxPresence) {
+			ReportLogger.logInfo(Status.PASS, "Successfully navigated to Show Customers Page");
 		}
+		else {ReportLogger.logInfo(Status.FAIL, "Failed to Navigate to Show Customers Page");}
 		
-		homePageObj.clickHomeLink();
-		
-		//validate navigation to home is successful
-		
-		
-        homePageObj.clickshowCustomersLink();
-		
-		//verify navigation to show  customer link
-		
-		homePageObj.clickHomeLink();
-		
-		//validate navigation to home is successful
-		
+		VerifyNavigationToHomePage();
 	}
 	
 }
