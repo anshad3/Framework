@@ -23,14 +23,14 @@ import com.login.pages.LoginPage;
 
 public class VerifycustLogin extends BaseSuite {
 	
-	@Test     //(dataProvider = "createUser", description = "Functionality under test- Create Users")
+	@Test(groups = {"Login"},priority=1,description = "Functionality under test- Valid Login-Verify Login with valid credentials")     //(dataProvider = "createUser", description = "Functionality under test- Create Users")
 	public void performLogin() {
 	//	LoginPage loginAsAdmin = new LoginPage(WebDriverEnum.custApp);
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 		
 		loginAsAdmin.loginAsGA();
 }
-	@Test(dataProvider = "register1", description = "Functionality under test- register")
+	@Test(dataProvider = "register1",groups = {"Login"},priority=2,description = "Functionality under test- InValid Login-Verify Login with Invalid credentials and verify the message")
 	public void performInvalidLogin(Map<String, String> testData) {
 LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 
@@ -49,7 +49,7 @@ String invalidmsg=testData.get("invmsg");
 	}
 	
 	
-	@Test(dataProvider = "register2", description = "Functionality under test- register")
+	@Test(dataProvider = "register2",groups = {"Login"},priority=3,description = "Functionality under test- Navigate to Login page with valid credentials and verify the customer name displayed in dashboard page")
 	public void verifyCustName(Map<String, String> testData) {
 LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 
@@ -66,7 +66,7 @@ String custname=testData.get("dashboard");
 		return new CommonUtil().getInputData(testContext, "register", "testexcelSheet2");
 	}
 	
-	@Test(dataProvider = "register3", description = "Functionality under test- register")
+	@Test(dataProvider = "register3", groups = {"Login"},priority=4,description = "Functionality under test- Verify the login header name")
 	public void PerformToverifyLoginHeader(Map<String, String> testData)
 	{
 		
@@ -84,14 +84,14 @@ String custname=testData.get("dashboard");
 		return new CommonUtil().getInputData(testContext, "register", "testexcelSheet3");
 	}
 		
-	@Test
+	@Test(groups = {"Login"},priority=5,description = "Functionality under test- Empty Login-Verify the user can Login with empty credentials")
 	public void LoginEmptyCredentials()
 	{
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 		loginAsAdmin.VerifyLoginEmptyCredentials();
 		//ReportLogger.logInfo(Status.PASS," Unable to login with Empty Credentials");
 	}
-	@Test
+	@Test(groups = {"Login"},priority=6,description = "Functionality under test- Verify login title")
 	public void PerformVerifyLoginTitle()
 	{
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
@@ -99,7 +99,7 @@ String custname=testData.get("dashboard");
 	}
 	
 	
-	@Test
+	@Test(groups = {"Login"},priority=7,description = "Functionality under test- Verify user can login with customer name with empty password")
 	public void PerformloginCustNameWithoutPWD()
 	{
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
@@ -107,7 +107,7 @@ String custname=testData.get("dashboard");
 		//ReportLogger.logInfo(Status.PASS," Unable to login with Empty Credentials");
 	}
 	
-	@Test
+	@Test(groups = {"Login"},priority=8,description = "Functionality under test- Verify user can login with empty customer name and valid password")
 	public void PerformloginPWDWithoutCustName()
 	{
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);

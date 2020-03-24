@@ -63,7 +63,7 @@ public class LoginActions extends BasePage{
 			
 			ReportLogger.logScreenShot(Status.PASS, "LoginPageScreenshot", driverEnum);
 			//writeLogAs.info("Navigating to the 'Userlogin' page");
-			ReportLogger.logInfo(Status.PASS, "Navigating to the 'Dashboard' page");
+			ReportLogger.logInfo(Status.INFO, "Navigating to the 'Dashboard' page");
 			gaLogin.setUserName(username);
 			gaLogin.setPassword(password);
 			//ReportLogger.logScreenShot(Status.PASS, "Screenshot", driverEnum);
