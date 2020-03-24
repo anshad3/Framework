@@ -21,10 +21,10 @@ import com.login.pages.LoginPage;
 public class HomeTestCases extends BaseSuite {
 	
 	
-	@Test (groups = {"Home"},priority=1,description = "Functionality under test- Home Navigations- Verify navigation to home page from Add Customer Page")
+	@Test (groups = {"Home"},priority=1,description = "TC013 : Functionality under test- Home Navigations- Verify navigation to home page from Add Customer Page")
 	//verify navigation to home page after clicking on add customer
 	public void verifyHomeNavigationFromAddCustomer() {
-		ReportLogger.logInfo(Status.INFO, "Starting the test case : Verify navigation to Home Page from Add Customer Page");
+		ReportLogger.logInfo(Status.INFO, "Starting the test case : TC013: Verify navigation to Home Page from Add Customer Page");
 		ReportLogger.logInfo(Status.INFO, "Navigating to the Login page");
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 		//Login to application
@@ -38,10 +38,10 @@ public class HomeTestCases extends BaseSuite {
      }
 
 	
-	@Test (groups = {"Home"},priority=2,description = "Functionality under test- Home Navigations- Verify navigation to Home page from Show Customers Page")
+	@Test (groups = {"Home"},priority=2,description = "TC014 :Functionality under test- Home Navigations- Verify navigation to Home page from Show Customers Page")
 	//verify navigation to home page after clicking on add customer
 	public void verifyHomeNavigationFromShowCustomer() {
-		ReportLogger.logInfo(Status.INFO, "Starting the test case : Verify navigation to Home page from Show Customers Page");
+		ReportLogger.logInfo(Status.INFO, "Starting the test case : TC014: Verify navigation to Home page from Show Customers Page");
 		ReportLogger.logInfo(Status.INFO, "Navigating to the Login page");
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 		//Login to application

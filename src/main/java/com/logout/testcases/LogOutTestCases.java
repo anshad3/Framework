@@ -11,9 +11,9 @@ import com.login.pages.LoginActions;
 
 public class LogOutTestCases extends BaseSuite  {
 	
-	@Test (groups = {"Logout"},priority=1,description = "Functionality under test- Verify Logout Functionality from Home Page")
+	@Test (groups = {"Logout"},priority=1,description = "TC015 :Functionality under test- Verify Logout Functionality from Home Page")
 	public void verifyLogOutFromHomePage() {
-		ReportLogger.logInfo(Status.INFO, "Starting the test case : Verify Logout Functionality from Home Page");
+		ReportLogger.logInfo(Status.INFO, "Starting the test case : TC015 : Verify Logout Functionality from Home Page");
 		ReportLogger.logInfo(Status.INFO, "Navigating to the Login page");
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 		//Login to application
@@ -25,9 +25,9 @@ public class LogOutTestCases extends BaseSuite  {
 		
      }
 
-	@Test (groups = {"Logout"},priority=2,description = "Functionality under test- Verify Logout Functionality from Add Customer Page")
+	@Test (groups = {"Logout"},priority=2,description = "TC016 : Functionality under test- Verify Logout Functionality from Add Customer Page")
 	public void verifyLogOutFromAddCustomerPage() {
-		ReportLogger.logInfo(Status.INFO, "Starting the test case : Verify Logout Functionality from Add Customer Page");
+		ReportLogger.logInfo(Status.INFO, "Starting the test case : TC016 : Verify Logout Functionality from Add Customer Page");
 		ReportLogger.logInfo(Status.INFO, "Navigating to the Login page");
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 		//Login to application
@@ -40,9 +40,9 @@ public class LogOutTestCases extends BaseSuite  {
 		
      }
 	
-	@Test (groups = {"Logout"},priority=3,description = "Functionality under test- Verify Logout Functionality from Show Customers Page")
+	@Test (groups = {"Logout"},priority=3,description = "TC017 : Functionality under test- Verify Logout Functionality from Show Customers Page")
 	public void verifyLogOutFromShowCustomerPage() {
-		ReportLogger.logInfo(Status.INFO, "Starting the test case : Verify Logout Functionality from Show Customers Page");
+		ReportLogger.logInfo(Status.INFO, "Starting the test case : TC017 : Verify Logout Functionality from Show Customers Page");
 		ReportLogger.logInfo(Status.INFO, "Navigating to the Login page");
 		LoginActions loginAsAdmin = new LoginActions(WebDriverEnum.custApp);
 		//Login to application
