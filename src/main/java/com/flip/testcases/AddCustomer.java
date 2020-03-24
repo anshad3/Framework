@@ -17,8 +17,7 @@ import com.login.pages.LoginActions;
 
 public class AddCustomer extends BaseSuite{
 
-	
-	@Test(dataProvider = "addCustomer", description = "Functionality under test- Add Customer")
+	@Test(dataProvider = "addCustomer", groups = {"AddCustomer"},priority=3, description = "Functionality under test- Add Customer")
 	public void performAddCustomer(Map<String, String> testData) {
 		
 		ReportLogger.logInfo(Status.INFO, "Starting the test case"+ testData.get("TestCaseId"));
